@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع الأمل التعليمي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-[Tajawal]">
+    <!-- القائمة العلوية -->
+    <nav class="bg-gradient-to-l from-blue-600 to-blue-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">موقع الأمل التعليمي</div>
+            <div class="hidden md:flex space-x-4 space-x-reverse">
+                <a href="#features" class="hover:text-blue-200">المميزات</a>
+                <a href="#team" class="hover:text-blue-200">فريقنا</a>
+                <a href="#testimonials" class="hover:text-blue-200">آراء المستخدمين</a>
+                <a href="login.html" class="bg-white text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-100">تسجيل الدخول</a>
+            </div>
+            <button class="md:hidden text-white" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden mt-4">
+            <a href="#features" class="block py-2 text-center hover:bg-blue-700">المميزات</a>
+            <a href="#team" class="block py-2 text-center hover:bg-blue-700">فريقنا</a>
+            <a href="#testimonials" class="block py-2 text-center hover:bg-blue-700">آراء المستخدمين</a>
+            <a href="login.html" class="block py-2 text-center bg-white text-blue-600 mx-4 rounded-lg hover:bg-blue-100">تسجيل الدخول</a>
+        </div>
+    </nav>
+
+    <!-- القسم الرئيسي -->
+    <header class="relative bg-gradient-to-br from-blue-50 to-blue-100 py-32 px-4 overflow-hidden">
+        <!-- أشكال زخرفية متحركة في الخلفية -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-200 rounded-full opacity-20 animate-float"></div>
+            <div class="absolute left-20 top-40 w-32 h-32 bg-purple-200 rounded-full opacity-20 animate-float-delayed"></div>
+            <div class="absolute right-1/4 bottom-20 w-24 h-24 bg-green-200 rounded-full opacity-20 animate-float"></div>
+        </div>
+        
+        <div class="container mx-auto text-center relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold text-blue-800 mb-6 animate-fade-in">
+                    مرحباً بكم في موقع الأمل التعليمي
+                </h1>
+                <p class="text-xl text-gray-600 mb-12 animate-fade-in-delayed">
+                    منصتكم التعليمية المتكاملة للتواصل بين الطلاب والمعلمين والإدارة
+                    <br>
+                    نوفر لكم تجربة تعليمية فريدة ومتميزة
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-delayed-2">
+                    <a href="login.html" class="bg-blue-600 text-white px-8 py-4 rounded-full text-xl hover:bg-blue-700 transition duration-300 transform hover:-translate-y-1 hover:shadow-lg">
+                        <i class="fas fa-graduation-cap ml-2"></i>
+                        ابدأ التجربة الآن
+                    </a>
+                    <a href="#features" class="bg-white text-blue-600 px-8 py-4 rounded-full text-xl hover:bg-blue-50 transition duration-300 transform hover:-translate-y-1 hover:shadow-lg border-2 border-blue-600">
+                        <i class="fas fa-info-circle ml-2"></i>
+                        تعرف على المزيد
+                    </a>
+                </div>
+                <div class="mt-12 flex justify-center space-x-4 space-x-reverse animate-fade-in-delayed-3">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-600"><span>+</span><span class="animate-number" data-target="1000">0</span></div>
+                        <div class="text-gray-600">طالب مسجل</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-purple-600"><span>+</span><span class="animate-number" data-target="50">0</span></div>
+                        <div class="text-gray-600">معلم متميز</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-green-600"><span>+</span><span class="animate-number" data-target="100">0</span></div>
+                        <div class="text-gray-600">درس تفاعلي</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- قسم المميزات -->
+    <section id="features" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">مميزات الموقع</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl text-center hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="bg-white p-4 rounded-full inline-block mb-6">
+                        <i class="fas fa-book text-4xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">الوصول السريع للدروس</h3>
+                    <p class="text-gray-600">جميع الدروس متاحة بسهولة وبشكل منظم مع إمكانية البحث والتصفية</p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl text-center hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="bg-white p-4 rounded-full inline-block mb-6">
+                        <i class="fas fa-comments text-4xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">التواصل المباشر</h3>
+                    <p class="text-gray-600">تواصل فوري مع المعلمين والإدارة مع نظام محادثات متطور</p>
+                </div>
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl text-center hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="bg-white p-4 rounded-full inline-block mb-6">
+                        <i class="fas fa-tasks text-4xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">إدارة الواجبات</h3>
+                    <p class="text-gray-600">نظام متكامل لإدارة الواجبات والاختبارات مع تنبيهات تلقائية</p>
+                </div>
+                <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-xl text-center hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="bg-white p-4 rounded-full inline-block mb-6">
+                        <i class="fas fa-video text-4xl text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">محتوى تعليمي متنوع</h3>
+                    <p class="text-gray-600">دروس تفاعلية وفيديوهات تعليمية عالية الجودة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الفريق -->
+    <section id="team" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">فريق العمل</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- عضو الفريق 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center transform hover:-translate-y-1 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" alt="أحمد محمد" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-100">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">أحمد محمد</h3>
+                    <p class="text-blue-600 mb-2">مطور الواجهة الأمامية</p>
+                    <p class="text-gray-600 text-sm">خبرة 5 سنوات في تطوير المواقع التعليمية</p>
+                </div>
+                <!-- عضو الفريق 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center transform hover:-translate-y-1 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80" alt="سارة أحمد" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-purple-100">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">سارة أحمد</h3>
+                    <p class="text-purple-600 mb-2">مصممة تجربة المستخدم</p>
+                    <p class="text-gray-600 text-sm">متخصصة في تصميم المنصات التعليمية</p>
+                </div>
+                <!-- عضو الفريق 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center transform hover:-translate-y-1 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="محمد علي" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-green-100">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">محمد علي</h3>
+                    <p class="text-green-600 mb-2">مطور الخلفية</p>
+                    <p class="text-gray-600 text-sm">خبير في تطوير أنظمة إدارة التعلم</p>
+                </div>
+                <!-- عضو الفريق 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center transform hover:-translate-y-1 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="نور حسن" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-orange-100">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">نور حسن</h3>
+                    <p class="text-orange-600 mb-2">مديرة المشروع</p>
+                    <p class="text-gray-600 text-sm">خبرة 7 سنوات في إدارة المشاريع التعليمية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم آراء المستخدمين -->
+    <section id="testimonials" class="py-16 bg-blue-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">آراء المستخدمين</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- رأي 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="relative">
+                        <div class="absolute -top-4 -right-4 bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde" alt="مستخدم" class="w-16 h-16 rounded-full border-4 border-blue-100 mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800 text-lg">خالد عمر</h4>
+                            <p class="text-blue-600">طالب</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"منصة رائعة سهلت علي الوصول للدروس والتواصل مع المعلمين. التنظيم رائع والمحتوى ممتاز. أنصح بها بشدة!"</p>
+                    <div class="flex items-center text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span class="text-gray-600 mr-2">5.0</span>
+                    </div>
+                </div>
+                <!-- رأي 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="relative">
+                        <div class="absolute -top-4 -right-4 bg-purple-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" alt="مستخدم" class="w-16 h-16 rounded-full border-4 border-purple-100 mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800 text-lg">ريم سعيد</h4>
+                            <p class="text-purple-600">معلمة</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"ساعدتني المنصة في تنظيم الدروس والواجبات بشكل فعال. الأدوات المتوفرة تسهل العمل وتوفر الوقت. تجربة مميزة!"</p>
+                    <div class="flex items-center text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="text-gray-600 mr-2">4.5</span>
+                    </div>
+                </div>
+                <!-- رأي 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="relative">
+                        <div class="absolute -top-4 -right-4 bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36" alt="مستخدم" class="w-16 h-16 rounded-full border-4 border-green-100 mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800 text-lg">أحمد سامي</h4>
+                            <p class="text-green-600">ولي أمر</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"أصبح متابعة تقدم أبنائي أسهل بكثير مع هذه المنصة. التقارير الدورية والتواصل المباشر مع المعلمين ميزة رائعة. شكراً لفريق الأمل!"</p>
+                    <div class="flex items-center text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span class="text-gray-600 mr-2">5.0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">موقع الأمل التعليمي</h3>
+                    <p class="text-gray-400">منصتكم التعليمية المتكاملة للتواصل والتعلم</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">روابط سريعة</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-white">المميزات</a></li>
+                        <li><a href="#team" class="text-gray-400 hover:text-white">فريقنا</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white">آراء المستخدمين</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">تواصل معنا</h3>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook text-2xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-2xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram text-2xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+                <p class="text-gray-400">&copy; 2024 موقع الأمل التعليمي. جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
