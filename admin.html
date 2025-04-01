@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة الإدارة - موقع الأمل التعليمي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-[Tajawal] bg-gray-50">
+    <!-- القائمة العلوية -->
+    <nav class="bg-gradient-to-l from-purple-600 to-purple-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="index.html" class="text-2xl font-bold flex items-center">
+                    <i class="fas fa-user-shield ml-2"></i>
+                    لوحة الإدارة
+                </a>
+            </div>
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <div class="relative">
+                    <button onclick="toggleNotifications()" class="text-white hover:text-purple-200">
+                        <i class="fas fa-bell text-xl"></i>
+                        <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">7</span>
+                    </button>
+                </div>
+                <div class="relative">
+                    <button onclick="toggleUserMenu()" class="flex items-center space-x-3 space-x-reverse hover:text-purple-200">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" alt="صورة المشرف" class="h-8 w-8 rounded-full">
+                        <span>م. خالد العمري</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex">
+        <!-- القائمة الجانبية -->
+        <aside class="w-64 bg-white h-screen shadow-lg fixed">
+            <div class="p-4">
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#dashboard" class="flex items-center space-x-3 space-x-reverse p-3 rounded-lg bg-purple-50 text-purple-600">
+                            <i class="fas fa-home"></i>
+                            <span>لوحة التحكم</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#users" class="flex items-center space-x-3 space-x-reverse p-3 rounded-lg hover:bg-gray-100">
+                            <i class="fas fa-users"></i>
+                            <span>إدارة المستخدمين</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#courses" class="flex items-center space-x-3 space-x-reverse p-3 rounded-lg hover:bg-gray-100">
+                            <i class="fas fa-book"></i>
+                            <span>إدارة الدروس</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#reports" class="flex items-center space-x-3 space-x-reverse p-3 rounded-lg hover:bg-gray-100">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>التقارير والإحصائيات</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#settings" class="flex items-center space-x-3 space-x-reverse p-3 rounded-lg hover:bg-gray-100">
+                            <i class="fas fa-cog"></i>
+                            <span>الإعدادات</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- المحتوى الرئيسي -->
+        <main class="mr-64 flex-1 p-8">
+            <!-- لوحة المعلومات -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-800">إجمالي الطلاب</h3>
+                            <p class="text-3xl font-bold text-purple-600">1,250</p>
+                        </div>
+                        <div class="bg-purple-100 p-3 rounded-full">
+                            <i class="fas fa-user-graduate text-purple-600 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-800">المعلمين</h3>
+                            <p class="text-3xl font-bold text-blue-600">45</p>
+                        </div>
+                        <div class="bg-blue-100 p-3 rounded-full">
+                            <i class="fas fa-chalkboard-teacher text-blue-600 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-800">الدروس</h3>
+                            <p class="text-3xl font-bold text-green-600">180</p>
+                        </div>
+                        <div class="bg-green-100 p-3 rounded-full">
+                            <i class="fas fa-book text-green-600 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-800">معدل النجاح</h3>
+                            <p class="text-3xl font-bold text-orange-600">85%</p>
+                        </div>
+                        <div class="bg-orange-100 p-3 rounded-full">
+                            <i class="fas fa-chart-line text-orange-600 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- إدارة المستخدمين -->
+            <div class="bg-white rounded-lg shadow mb-8">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold text-gray-800">إدارة المستخدمين</h2>
+                        <button class="bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600">
+                            <i class="fas fa-plus ml-2"></i>
+                            إضافة مستخدم جديد
+                        </button>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full">
+                            <thead>
+                                <tr class="bg-gray-50">
+                                    <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">المستخدم</th>
+                                    <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">الدور</th>
+                                    <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">تاريخ التسجيل</th>
+                                    <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">الحالة</th>
+                                    <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">الإجراءات</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="">
+                                            <div class="mr-4">
+                                                <div class="text-sm font-medium text-gray-900">محمد أحمد</div>
+                                                <div class="text-sm text-gray-500">mohammad@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">معلم</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">2024/01/15</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                            نشط
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-left text-sm font-medium">
+                                        <button class="text-blue-600 hover:text-blue-900 ml-3"><i class="fas fa-edit"></i></button>
+                                        <button class="text-red-600 hover:text-red-900"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="">
+                                            <div class="mr-4">
+                                                <div class="text-sm font-medium text-gray-900">سارة خالد</div>
+                                                <div class="text-sm text-gray-500">sara@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">طالب</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">2024/01/10</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                            نشط
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-left text-sm font-medium">
+                                        <button class="text-blue-600 hover:text-blue-900 ml-3"><i class="fas fa-edit"></i></button>
+                                        <button class="text-red-600 hover:text-red-900"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- التقارير والإحصائيات -->
+            <div class="bg-white rounded-lg shadow">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">التقارير والإحصائيات</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">توزيع الطلاب حسب الصفوف</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-gray-600">الصف العاشر</span>
+                                    <div class="flex items-center">
+                                        <div class="w-48 h-2 bg-gray-200 rounded-full mr-2">
+                                            <div class="w-3/4 h-full bg-purple-500 rounded-full"></div>
+                                        </div>
+                                        <span class="text-gray-600">75%</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-gray-600">الصف التاسع</span>
+                                    <div class="flex items-center">
+                                        <div class="w-48 h-2 bg-gray-200 rounded-full mr-2">
+                                            <div class="w-1/2 h-full bg-blue-500 rounded-full"></div>
+                                        </div>
+                                        <span class="text-gray-600">50%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">معدل النجاح الشهري</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-gray-600">يناير</span>
+                                    <div class="flex items-center">
+                                        <div class="w-48 h-2 bg-gray-200 rounded-full mr-2">
+                                            <div class="w-4/5 h-full bg-green-500 rounded-full"></div>
+                                        </div>
+                                        <span class="text-gray-600">80%</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-gray-600">فبراير</span>
+                                    <div class="flex items-center">
+                                        <div class="w-48 h-2 bg-gray-200 rounded-full mr-2">
+                                            <div class="w-9/10 h-full bg-green-500 rounded-full"></div>
+                                        </div>
+                                        <span class="text-gray-600">90%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleNotifications() {
+            // إضافة كود للتحكم في عرض الإشعارات
+        }
+
+        function toggleUserMenu() {
+            // إضافة كود للتحكم في عرض قائمة المستخدم
+        }
+    </script>
+</body>
+</html>
