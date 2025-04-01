@@ -1,0 +1,166 @@
+/* تعريف المتغيرات العامة */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1d4ed8;
+    --background-light: #f0f9ff;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+}
+
+/* تأثيرات حركية */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-fade-in-delayed {
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.animate-fade-in-delayed-2 {
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 1s;
+}
+
+.animate-fade-in-delayed-3 {
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 1.5s;
+}
+
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    line-height: 1.6;
+}
+
+/* تنسيقات إضافية للأزرار */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* تأثيرات حركية */
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* تنسيقات للبطاقات */
+.card {
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* تنسيقات للصور */
+.team-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* تنسيقات للنصوص */
+.section-title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* تنسيقات للتقييمات */
+.testimonial-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* تنسيقات للأيقونات */
+.feature-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* تنسيقات للقوائم */
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--background-light);
+}
+
+/* تنسيقات للفورم */
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* تنسيقات للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.875rem;
+    }
+
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
